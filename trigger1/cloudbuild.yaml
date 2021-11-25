@@ -3,13 +3,13 @@ steps:
   args: ['echo', 'trigger1']
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
-  dir: 'trigger1'
   args:
    - '-c'
    - |
      gcloud functions deploy replicate-data \
      --region=us-central1 \
      --trigger-http \
-     --entry-point=main \
-     --runtime=python38
+     --entry-point=hello_world \
+     --runtime=python38 \
+     --source=.
 
