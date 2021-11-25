@@ -3,6 +3,7 @@ steps:
   args: ['echo', 'trigger1']
 - name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'bash'
+  dir: 'trigger1'
   args:
    - '-c'
    - |
